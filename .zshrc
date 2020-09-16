@@ -117,6 +117,7 @@ alias gb="git branch"
 alias gp="git pull"
 alias gs="git status"
 alias gr="git reset"
+alias gf="git fetch"
 alias gm="gitCommand"
 
 # node alias
@@ -124,18 +125,31 @@ alias kn="killall node"
 
 # gcloud
 alias gc="gcloud"
-alias gcn="gcloud container"
+alias gcc="gcloud container"
+alias gccc="gcloud container clusters"
 alias gcf="gcloud config"
+alias gcp="gcloud projects"
 
 # kubectl alias
 alias kb="kubectl"
 alias kbf="kubectl config"
+alias kbpf="kubectl port-forward"
+
+# minikube alias
+alias mk="minikube"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # export PATH="/usr/local/opt/node@10/bin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chaiwattungtongsoontorn/google-cloud-sdk/completion.zsh.inc'; fi
 
 gitCommand () {
   local description=$1;
