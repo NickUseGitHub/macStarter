@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # docker-compose alias
-alias dc="docker-compose"
+alias dc="docker compose"
 
 # git alias
 alias gco="git checkout"
@@ -137,6 +137,9 @@ alias kbpf="kubectl port-forward"
 
 # minikube alias
 alias mk="minikube"
+
+# Project alias
+# source ~/zshrc_alias/.projects_zshrc
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
