@@ -1,0 +1,11 @@
+# ~/.tmuxinator/test.yml
+
+name: <SCRIPT_NAME>
+root: <PROJECT_DIRECTORY> # e.g. ~/Apps/my-apps/app
+
+windows:
+  - start_app:
+      layout: even-horizontal
+      panes:
+        - docker-compose up db
+        - cd cms && yarn && yarn start
