@@ -108,6 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Chrome
+alias chrome="open -a 'Google Chrome'"
+
 # docker-compose alias
 alias dc="docker compose"
 
