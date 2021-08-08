@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Chrome
+# parameter $1 as url then chrome will open that url
 alias chrome="open -a 'Google Chrome'"
 
 # docker-compose alias
