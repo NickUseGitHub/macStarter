@@ -8,3 +8,5 @@ brew install n
 brew install zsh zsh-completions
 
 brew install googler
+
+brew install tree
