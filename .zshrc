@@ -151,6 +151,8 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Command to use different ssh key for git
+alias gnick="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_NickUseGithub_ed25519 -o IdentitiesOnly=yes' git"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc'; fi
