@@ -117,6 +117,7 @@ alias dc="docker compose"
 
 # git alias
 alias gco="git checkout"
+alias gcr="git rev-parse --abbrev-ref HEAD"
 alias gb="git branch"
 alias gp="git pull"
 alias gs="git status"
