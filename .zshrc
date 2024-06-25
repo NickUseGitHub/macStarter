@@ -155,6 +155,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Command to use different ssh key for git
 alias gnick="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_NickUseGithub_ed25519 -o IdentitiesOnly=yes' git"
 
+# Git Command to commit with right name in description
+alias gnickm="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_NickUseGithub_ed25519 -o IdentitiesOnly=yes' git commit --author='Chaiwat Tungtongsoontorn <nickt.tnick@gmail.com>' -m"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc'; fi
 
