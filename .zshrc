@@ -143,6 +143,27 @@ alias kbpf="kubectl port-forward"
 # minikube alias
 alias mk="minikube"
 
+# Kafka
+export PATH="$PATH:/Users/chaiwatu/kafka_2.13-3.3.1/bin"
+
+# Golang
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Mysql
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Python
+export PATH="$(pyenv root)/shims:$PATH"
+
+# Flutter
+# Setup flutter ref: https://www.youtube.com/watch?v=fEfMYAAeHmY
+export PATH="$PATH:/Applications/development/flutter/bin"
+
 # Project alias
 # source ~/zshrc_alias/.projects_zshrc
 
