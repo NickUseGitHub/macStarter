@@ -108,6 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# read alias file
+# Nick ssh's script
+source ~/zshrc_alias/.nick_ssh_key
+
 # Chrome
 # parameter $1 as url then chrome will open that url
 alias chrome="open -a 'Google Chrome'"

@@ -1,0 +1,3 @@
+alias gnick="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_NickUseGithub_ed25519 -o IdentitiesOnly=yes' git"
+alias gnickm="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_NickUseGithub_ed25519 -o IdentitiesOnly=yes' git commit --author='Chaiwat Tungtongsoontorn <nickt.tnick@gmail.com>' -m"
+alias usegitnick="ssh-add -K ~/.ssh/id_nickgithub_ed25519"
