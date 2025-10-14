@@ -77,6 +77,9 @@ POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# ENVs
+HISTTIMEFORMAT="%Y-%m-%d %T "
+
 # auto-suggestion
 # plugins=(zsh-autosuggestions)
 
@@ -127,7 +130,8 @@ alias gp="git pull"
 alias gs="git status"
 alias gr="git reset"
 alias gf="git fetch"
-alias gm="gitCommand"
+alias gm="gitCommitWithJiraComment"
+alias gpm="gitPlainCommit"
 
 # node alias
 alias kn="killall node"
@@ -162,7 +166,11 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # Python
-export PATH="$(pyenv root)/shims:$PATH"
+export PATH="$HOME/.tfenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Flutter
 # Setup flutter ref: https://www.youtube.com/watch?v=fEfMYAAeHmY
@@ -170,6 +178,9 @@ export PATH="$PATH:/Applications/development/flutter/bin"
 
 # Project alias
 # source ~/zshrc_alias/.projects_zshrc
+
+# AWS
+export AWS_PROFILE=<AWS_PROFILE_NAME>
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -189,8 +200,15 @@ if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/path.zsh.inc' ]; then .
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/chaiwattungtongsoontorn/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chaiwattungtongsoontorn/google-cloud-sdk/completion.zsh.inc'; fi
 
-gitCommand () {
+gitCommitWithJiraComment () {
   local description=$1;
-  local currentBranch=$(git rev-parse --abbrev-ref HEAD);
-  git commit -m "[$currentBranch] $description";
+  local PrefixTaskTaskNo=$(git rev-parse --abbrev-ref HEAD | cut -d'/' -f2);
+
+  git commit -m "$PrefixTaskTaskNo $description";
+}
+
+gitPlainCommit () {
+  local description=$1;
+
+  git commit -m $description;
 }
