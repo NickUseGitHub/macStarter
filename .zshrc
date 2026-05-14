@@ -182,6 +182,16 @@ export PATH="$PATH:/Applications/development/flutter/bin"
 # AWS
 export AWS_PROFILE=<AWS_PROFILE_NAME>
 
+# Android
+export ANDROID_HOME=$HOME/Android/sdk
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+export PATH=$ANDROID_HOME/emulator:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+# Java
+export PATH="$PATH:/usr/bin/java"
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # export PATH="/usr/local/opt/node@10/bin:$PATH"
