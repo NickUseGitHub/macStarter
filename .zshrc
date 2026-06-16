@@ -22,6 +22,7 @@ POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 
 # split your segments up between two lines
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir newline vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline custom_git_global_email vcs)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -110,6 +111,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Custom segment: global git email
+prompt_git_global_email() {
+  git config --global --get user.email 2>/dev/null
+}
+
+POWERLEVEL9K_CUSTOM_GIT_GLOBAL_EMAIL="prompt_git_global_email"
+POWERLEVEL9K_CUSTOM_GIT_GLOBAL_EMAIL_FOREGROUND="yellow"
+
 
 # read alias file
 # Nick ssh's script
