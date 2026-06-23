@@ -5,3 +5,5 @@ Powerlevel9k See more info on
 
 ### Install Colima to use docker without docker daemon
 > [https://smallsharpsoftwaretools.com/tutorials/use-colima-to-run-docker-containers-on-macos/](https://smallsharpsoftwaretools.com/tutorials/use-colima-to-run-docker-containers-on-macos/)
+
+Test push
